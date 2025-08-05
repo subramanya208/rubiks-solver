@@ -1,0 +1,9 @@
+[build]
+  publish = "/"
+  command = "echo 'Skipping build step'"
+  ignore_submodules = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

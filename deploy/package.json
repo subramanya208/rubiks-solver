@@ -1,0 +1,18 @@
+{
+  "name": "rubiks-cube-solver",
+  "version": "1.0.0",
+  "description": "A 3D Rubik's Cube solver with visualization",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build required - static site'"
+  },
+  "keywords": [
+    "rubiks",
+    "cube",
+    "solver",
+    "3d",
+    "visualization"
+  ],
+  "author": "",
+  "license": "MIT"
+}
