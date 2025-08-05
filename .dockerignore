@@ -1,0 +1,58 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Version control
+.git
+.gitignore
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+
+# Testing
+coverage
+.nyc_output
+test
+tests
+
+# Build files
+dist
+build
+.DS_Store
+
+# Documentation
+README.md
+CHANGELOG.md
+docs
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*
+
+# Other unnecessary files
+*.md
+!README.md
+*.yml
+*.yaml
+.editorconfig
+.eslintrc
+.eslintignore
+.prettierrc
+.prettierignore
