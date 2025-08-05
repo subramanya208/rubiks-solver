@@ -1,32 +1,31 @@
-# Use Node.js LTS (Long Term Support) as the base image
 FROM node:18-alpine
+
+# Create app directory with correct permissions
+RUN mkdir -p /app && chown -R node:node /app
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy and install dependencies
 COPY package*.json ./
+RUN npm install --production
 
-# Install dependencies
-# Use --production flag to avoid installing dev dependencies
-RUN npm ci --production
-
-# Copy application code
+# Copy app source code
 COPY . .
 
 # Set environment variables
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Expose the port the app will run on
+# Expose port
 EXPOSE 3000
 
-# Use a non-root user for security
+# Use non-root user
 USER node
 
-# Health check to verify the service is running
+# Healthcheck
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
   CMD wget -qO- http://localhost:3000/health || exit 1
 
-# Start the application
+# Start app
 CMD ["node", "server.js"]
