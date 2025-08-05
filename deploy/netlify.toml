@@ -1,7 +1,6 @@
 [build]
   publish = "/"
   command = "echo 'Skipping build step'"
-  ignore_submodules = true
 
 [[redirects]]
   from = "/*"
